@@ -281,7 +281,7 @@ namespace Starveio
 
             public override string ToString()
             {
-                return $"{Type} ({e?.RawData.Length})";
+                return Type; // +  $"{Type} ({e?.RawData.Length})";
             }
         }
 
