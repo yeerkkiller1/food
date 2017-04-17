@@ -38,6 +38,8 @@ namespace Starveio
             var world = new World();
             var user = new User();
 
+            AIMode aiMode = new MoveToPosition(5000, 5000, 100);
+
             using (var ws = new WebSocket(url))
             {
                 var controller = new Controller(ws);
@@ -58,17 +60,21 @@ namespace Starveio
                     ws.OnMessage += (t, e) =>
                     {
                         var message = new Message(e, world, user);
-                        Console.WriteLine(message);
+                        //Console.WriteLine(message);
                     };
 
                     await connected.Task;
 
                     ws.Send(JsonConvert.SerializeObject(new object[] { "okaygo", 2560, 1440, 2 }));
 
-                    Task.Run((Action)(() =>
+                    Task aiTask = Task.Run(async () =>
                     {
-                        controller.Move();
-                    }), token.Token);
+                        while (!token.Token.IsCancellationRequested)
+                        {
+                            aiMode = aiMode.Do(world, user, controller);
+                            await Task.Delay(100);
+                        }
+                    });
 
                     await closed.Task;
                 }
@@ -77,10 +83,71 @@ namespace Starveio
             done.Release();
         }
 
+        interface AIMode
+        {
+            AIMode Do(World world, User user, Controller controller);
+        }
+        class MoveToPosition : AIMode
+        {
+            public MoveToPosition(int x, int y, double distance)
+            {
+                this.x = x;
+                this.y = y;
+                this.distance = distance;
+            }
+
+            public int x;
+            public int y;
+            public double distance;
+
+            private int lastUserX;
+            private int lastUserY;
+
+            public AIMode Do(World world, User user, Controller controller)
+            {
+                if (!world.units.ContainsKey(user.uid)) return this;
+                var self = world.units[user.uid];
+
+                //controller.Move(new Controller.MoveKeys[] { Controller.MoveKeys.Right });
+
+                ///Console.WriteLine("At " + self.x + ", " + self.y);
+
+                int offX = self.x - x;
+                int offY = self.y - y;
+
+                double curDistance = Math.Sqrt(offX * offX + offY * offY);
+                if (curDistance < distance)
+                {
+                    controller.Move(new Controller.MoveKeys[] { });
+                }
+                else
+                {
+                    Controller.MoveKeys xMove = offX > 0 ? Controller.MoveKeys.Left : Controller.MoveKeys.Right;
+                    Controller.MoveKeys yMove = offY > 0 ? Controller.MoveKeys.Top : Controller.MoveKeys.Bottom;
+
+                    var keys = new Controller.MoveKeys[] { xMove, yMove }.ToList();
+
+                    if (self.x == lastUserX && self.y == lastUserY && keys.Count > 1)
+                    {
+                        keys.RemoveRange(1, keys.Count - 1);
+                    }
+
+                    controller.Move(keys.ToArray());
+                }
+
+                Console.WriteLine("At " + self.x + ", " + self.y);
+                lastUserX = self.x;
+                lastUserY = self.y;
+                
+
+                return this;
+            }
+        }
+
         class World
         {
             public object time;
-            public long max_units;
+            public int max_units;
             public List<Player> players;
             public Dictionary<long, Unit> units = new Dictionary<long, Unit>();
         }
@@ -98,17 +165,81 @@ namespace Starveio
             public bool alive;
         }
 
+        enum ActionStates
+        {
+            DELETE = 1,
+            HURT = 2,
+            COLD = 4,
+            HUNGER = 8,
+            ATTACK = 16,
+            WALK = 32,
+            IDLE = 64,
+            HEAL = 128,
+            WEB = 256
+        }
+
         class Unit
         {
+            Dictionary<int, string> ITEMS = new Dictionary<int, string>()
+            {
+                {0,"PLAYERS"  },
+                {1,"FIRE" },
+                {2,"WORKBENCH" },
+                {3,"SEED" },
+                {4,"WALL" },
+                {5,"SPIKE" },
+                {6,"BIG_FIRE" },
+                {7,"STONE_WALL" },
+                {8,"GOLD_WALL" },
+                {9,"DIAMOND_WALL" },
+                {10,"WOOD_DOOR" },
+                {11,"CHEST" },
+                {12,"STONE_SPIKE" },
+                {13,"GOLD_SPIKE" },
+                {14,"DIAMOND_SPIKE" },
+                {15,"STONE_DOOR" },
+                {16,"GOLD_DOOR" },
+                {17,"DIAMOND_DOOR" },
+                {18,"FURNACE" },
+                {60,"RABBIT" },
+                {61,"WOLF" },
+                {62,"SPIDER" },
+                {100,"FRUIT" }
+            };
+
+
             public int x;
             public int y;
             public double angle;
             public long actions = 0;
-            public object u;
-            public object p;
-            public object t;
-            public object n;
-            public object r;
+            public int type;
+            public int pid;
+            public int id;
+            public object info;
+            public int uid;
+
+            /*
+             *     this.type = c;
+    this.pid = g;
+    this.id = f;
+    this.x = d;
+    this.y = e;
+    this.nangle = this.angle = m;
+    this.action = n;
+    this.info = p;
+    this.r = {
+        x: d,
+        y: e
+    };
+    world && (this.uid = g * world.max_units + f);
+    switch (c) {
+    case ITEMS.PLAYERS:
+             */
+
+            public override string ToString()
+            {
+                return x + ", " + y + " (" + ITEMS[type] + ")";
+            }
         }
 
         class Message
@@ -176,13 +307,15 @@ namespace Starveio
             void ParseHandshake(object[] c)
             {
                 world.time = c[7];
-                world.max_units = (long)c[2];
+                world.max_units = (int)(long)c[2];
                 user.id = (long)c[1];
                 user.uid = user.id * world.max_units;
                 //user.cam.change(c[4], c[5]);
                 world.players = new List<Player>();
                 for (int d = 0; d < (long)c[6]; d++)
                     world.players.Add(new Player());
+
+                Console.WriteLine(JsonConvert.SerializeObject(user));
 
                 JArray playersRaw = (JArray)c[3];
                 for (int d = 0; d < playersRaw.Count; d++)
@@ -205,7 +338,7 @@ namespace Starveio
             {
                 var d = resetWorld;
                 var f = e.RawData;
-                short[] c = new short[f.Length / 2];
+                ushort[] c = new ushort[f.Length / 2];
                 Buffer.BlockCopy(f, 0, c, 0, f.Length);
                 if (resetWorld)
                 {
@@ -218,11 +351,13 @@ namespace Starveio
                     var n = 1 + 6 * e;
                     var p = f[m];
                     var action = f[m + 1];
-                    var t = c[n + 4];
+                    var id = c[n + 4];
 
-                    var r = p * world.max_units + t;
-                    if (false) //(q & STATE.DELETE)
+                    int uid = p * world.max_units + id;
+                    if ((action & (int)ActionStates.DELETE) != 0) //(q & STATE.DELETE)
                     {
+                        Console.WriteLine("Delete " + uid);
+                        world.units.Remove(uid);
                         //world.delete_units(r);
                     }
                     else
@@ -239,14 +374,22 @@ namespace Starveio
                         unit.y = y;
                         unit.angle = angle;
                         unit.actions = unit.actions | action;
-                        unit.u = u;
-                        unit.p = p;
-                        unit.t = t;
-                        unit.n = n;
-                        unit.r = r;
-
-                        world.units[r] = unit;
-                        Console.WriteLine(JsonConvert.SerializeObject(unit));
+                        unit.type = u;
+                        unit.pid = p;
+                        unit.id = id;
+                        unit.info = n;
+                        unit.uid = uid;
+                        if (x == 0 && y == 0)
+                        {
+                            Console.WriteLine("Not position for " + unit.uid);
+                            if(unit.uid == user.uid)
+                            {
+                                int crap = 1;
+                            }
+                            continue;
+                        }
+                        world.units[uid] = unit;
+                        //Console.WriteLine(unit.ToString());
 
                         /*
                         if(world.fast_units[r])
@@ -293,9 +436,43 @@ namespace Starveio
                 this.socket = socket;
             }
 
-            public void Move()
-            {
+            // 1 = update cam
+            // 2 = move
+            // 3 = send angle
 
+            public enum MoveKeys
+            {
+                Left = 1,
+                Right = 2,
+                Bottom = 4,
+                Top = 8
+            }
+
+            private MoveKeys[] lastKeys;
+            int hack = 10;
+            public void Move(MoveKeys[] keys)
+            {
+                if(lastKeys != null && JsonConvert.SerializeObject(lastKeys) == JsonConvert.SerializeObject(keys))
+                {
+                    hack--;
+                    if (hack < 0)
+                    {
+                        hack = 10;
+                    }
+                    else
+                    {
+                        return;
+                    }
+                }
+                lastKeys = keys;
+                int c = 0;
+                for(int i = 0; i < keys.Length; i++)
+                {
+                    c |= (int)keys[i];
+                }
+
+                Console.WriteLine("Move " + string.Join(",", keys.Select(x => Enum.GetName(typeof(MoveKeys), x))));
+                this.socket.Send(JsonConvert.SerializeObject(new object[] { 2, c }));
             }
         }
 
