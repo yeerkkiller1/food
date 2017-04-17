@@ -1,0 +1,333 @@
+for (var x = 0; x < 100; x++) {
+for (var y = 0; y < 100; y++) {
+for (var bi = 0; bi < 4; bi++) {
+var b = MAP.tiles[x][y].b[bi];
+if (b.length > 0) console.log(b[0]);
+}}}
+
+Object {x: 45, y: 1041, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 81, y: 2043, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 9, y: 3120, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 81, y: 3399, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 93, y: 5262, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 81, y: 5628, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 93, y: 6696, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 54, y: 7611, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 27, y: 8118, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 36, y: 9573, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 192, y: 204, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 153, y: 909, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 102, y: 1785, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 153, y: 4452, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 183, y: 7197, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 138, y: 8490, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 150, y: 9273, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 489, y: 9933, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 639, y: 102, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 765, y: 4878, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 960, y: 9942, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 1128, y: 8688, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 1284, y: 8292, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 1545, y: 72, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 1500, y: 5076, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 1536, y: 7368, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 1818, y: 8037, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 1911, y: 60, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 1956, y: 5436, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 1974, y: 9972, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 2106, y: 8037, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 2232, y: 5616, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 2322, y: 111, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 2367, y: 990, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 2352, y: 2874, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 2460, y: 906, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 2562, y: 3, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 2592, y: 4284, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 2502, y: 4401, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 2988, y: 1566, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 3002.4545288085938, y: 111, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 3045, y: 9831, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 3272.4545288085938, y: 57, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 3387, y: 165, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 3393, y: 1368, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 3447, y: 4248, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 3537, y: 3168, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 3653.9999084472656, y: 57, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 3827.9999084472656, y: 165, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 3871.9090576171875, y: 9925.090576171875, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 3960, y: 7002, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 4068, y: 1176, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 4086, y: 8964, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 4293, y: 6894, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 4358.7271728515625, y: 93, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 4532.7271728515625, y: 204, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 4527, y: 4959, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 4560, y: 8484, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 4517.181884765625, y: 9844.090576171875, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 4787.7271728515625, y: 204, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 4707, y: 3303, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 4877.181884765625, y: 9925.090576171875, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 4923, y: 1260, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 5130, y: 2601, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 5175, y: 5508, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 5305.9090576171875, y: 321, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 5346, y: 858, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 5346, y: 2835, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 5815.3634033203125, y: 81, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 5895.5452880859375, y: 9946.090576171875, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 6181.9090576171875, y: 216, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 6336, y: 8136, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 6453, y: 5742, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 6456, y: 7308, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 6408.5452880859375, y: 9778.090576171875, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 6516, y: 3582, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 6900, y: 912, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 6900, y: 5364, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 7068.818115234375, y: 204, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 7227, y: 2070, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 7371, y: 3771, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 7389, y: 4473, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 7412.454345703125, y: 159, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 7464, y: 9468, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 7459.090576171875, y: 9955.090576171875, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 7641, y: 2763, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 7731, y: 2043, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 7704, y: 3384, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 7788, y: 6072, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 7716, y: 7620, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 8084.1815185546875, y: 78, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 8001, y: 2817, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 8190, y: 1089, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 8109, y: 4734, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 8262, y: 6867, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 8598.818115234375, y: 423, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 8508, y: 5676, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 8661.818115234375, y: 9832.090576171875, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 8739, y: 7272, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 8808, y: 7944, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 8949.818115234375, y: 24, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 8940, y: 2412, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 8952, y: 4776, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 9237.818115234375, y: 195, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 9573.818115234375, y: 9871.090576171875, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 9672.818115234375, y: 4202.454528808594, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 9714.818115234375, y: 24, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 9762.818115234375, y: 1326.5454483032227, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 9738.818115234375, y: 2952.5454711914062, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 9780.818115234375, y: 5325, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 9765.818115234375, y: 8938.090576171875, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 9846.818115234375, y: 591, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 9828.818115234375, y: 8102.726806640625, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 9978.818115234375, y: 90, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 9951.818115234375, y: 477, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 9915.818115234375, y: 1529.7272644042969, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 9984.818115234375, y: 2162.727264404297, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 9906.818115234375, y: 2390.727264404297, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 9948.818115234375, y: 3348.818115234375, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 9990.818115234375, y: 4902.5452880859375, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 9948.818115234375, y: 5622, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 9936.818115234375, y: 6577.9090576171875, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 9957.818115234375, y: 7626.544921875, hit: LinearAnimation, update: false, time: 0…}
+VM2560:4 Object {x: 9927.818115234375, y: 9262.090576171875, hit: LinearAnimation, update: false, time: 0…}
+
+for (var x = 0; x < 100; x++) {
+for (var y = 0; y < 100; y++) {
+for (var bi = 0; bi < 3; bi++) {
+var b = MAP.tiles[x][y].d[bi];
+if (b.length > 0) console.log(b[0]);
+}}}
+VM2969:5 Object {x: 162, y: 4599, hit: LinearAnimation, update: false, time: 0…}
+VM2969:5 Object {x: 2925, y: 9747, hit: LinearAnimation, update: false, time: 0…}
+VM2969:5 Object {x: 8154, y: 1647, hit: LinearAnimation, update: false, time: 0…}
+
+for (var x = 0; x < 100; x++) {
+for (var y = 0; y < 100; y++) {
+for (var bi = 0; bi < 3; bi++) {
+var b = MAP.tiles[x][y].g[bi];
+if (b.length > 0) console.log(b[0]);
+}}}
+VM3016:5 Object {x: 144, y: 2673, hit: LinearAnimation, update: false, time: 0…}
+VM3016:5 Object {x: 171, y: 9540, hit: LinearAnimation, update: false, time: 0…}
+VM3016:5 Object {x: 555, y: 1591.0000076293945, hit: LinearAnimation, update: false, time: 0…}
+VM3016:5 Object {x: 1224, y: 6984, hit: LinearAnimation, update: false, time: 0…}
+VM3016:5 Object {x: 2568, y: 8640, hit: LinearAnimation, update: false, time: 0…}
+VM3016:5 Object {x: 2754, y: 3972, hit: LinearAnimation, update: false, time: 0…}
+VM3016:5 Object {x: 2784, y: 5700, hit: LinearAnimation, update: false, time: 0…}
+VM3016:5 Object {x: 3444, y: 612, hit: LinearAnimation, update: false, time: 0…}
+VM3016:5 Object {x: 5265, y: 2673, hit: LinearAnimation, update: false, time: 0…}
+VM3016:5 Object {x: 5391, y: 5112, hit: LinearAnimation, update: false, time: 0…}
+VM3016:5 Object {x: 5736, y: 7596, hit: LinearAnimation, update: false, time: 0…}
+VM3016:5 Object {x: 6192, y: 9636, hit: LinearAnimation, update: false, time: 0…}
+VM3016:5 Object {x: 6678, y: 3834, hit: LinearAnimation, update: false, time: 0…}
+VM3016:5 Object {x: 6759, y: 990, hit: LinearAnimation, update: false, time: 0…}
+VM3016:5 Object {x: 8163, y: 8091, hit: LinearAnimation, update: false, time: 0…}
+VM3016:5 Object {x: 9801, y: 2754, hit: LinearAnimation, update: false, time: 0…}
+
+for (var x = 0; x < 100; x++) {
+for (var y = 0; y < 100; y++) {
+for (var bi = 0; bi < 3; bi++) {
+var b = MAP.tiles[x][y].h[bi];
+if (b.length > 0) console.log(b[0]);
+}}}
+VM3077:5 Object {x: 225, y: 1062}
+VM3077:5 Object {x: 288, y: 4275}
+VM3077:5 Object {x: 216, y: 5733}
+VM3077:5 Object {x: 396, y: 2394}
+VM3077:5 Object {x: 342, y: 6777}
+VM3077:5 Object {x: 324, y: 8163}
+VM3077:5 Object {x: 405, y: 9432}
+VM3077:5 Object {x: 657, y: 3528}
+VM3077:5 Object {x: 756, y: 7425}
+VM3077:5 Object {x: 843, y: 1539}
+VM3077:5 Object {x: 819, y: 5895}
+VM3077:5 Object {x: 954, y: 4968}
+VM3077:5 Object {x: 1032, y: 1050}
+VM3077:5 Object {x: 1008, y: 7740}
+VM3077:5 Object {x: 1188, y: 3429}
+VM3077:5 Object {x: 1287, y: 1890}
+VM3077:5 Object {x: 1215, y: 4428}
+VM3077:5 Object {x: 1395, y: 2835}
+VM3077:5 Object {x: 1494, y: 5688}
+VM3077:5 Object {x: 1431, y: 6138}
+VM3077:5 Object {x: 1539, y: 828}
+VM3077:5 Object {x: 1620, y: 3852}
+VM3077:5 Object {x: 1692, y: 8172}
+VM3077:5 Object {x: 1755, y: 7218}
+VM3077:5 Object {x: 1710, y: 8910}
+VM3077:5 Object {x: 1746, y: 9558}
+VM3077:5 Object {x: 1881, y: 4950}
+VM3077:5 Object {x: 2052, y: 2943}
+VM3077:5 Object {x: 2232, y: 1602}
+VM3077:5 Object {x: 2277, y: 2412}
+VM3077:5 Object {x: 2295, y: 9873}
+VM3077:5 Object {x: 2403, y: 369}
+VM3077:5 Object {x: 2439, y: 5400}
+VM3077:5 Object {x: 2502, y: 6048}
+VM3077:5 Object {x: 2646, y: 3789}
+VM3077:5 Object {x: 2790, y: 7236}
+VM3077:5 Object {x: 2790, y: 8487}
+VM3077:5 Object {x: 2781, y: 9243}
+VM3077:5 Object {x: 2880, y: 2799}
+VM3077:5 Object {x: 2835, y: 4761}
+VM3077:5 Object {x: 2907, y: 1728}
+VM3077:5 Object {x: 3042, y: 7605}
+VM3077:5 Object {x: 3249, y: 1314}
+VM3077:5 Object {x: 3231, y: 6138}
+VM3077:5 Object {x: 3375, y: 4059}
+VM3077:5 Object {x: 3375, y: 5283}
+VM3077:5 Object {x: 3393, y: 8109}
+VM3077:5 Object {x: 3420, y: 3114}
+VM3077:5 Object {x: 3645, y: 2484}
+VM3077:5 Object {x: 3663, y: 3303}
+VM3077:5 Object {x: 3681, y: 6840}
+VM3077:5 Object {x: 3834, y: 1251}
+VM3077:5 Object {x: 3879, y: 8415}
+VM3077:5 Object {x: 3942, y: 4212}
+VM3077:5 Object {x: 3960, y: 9225}
+VM3077:5 Object {x: 4023, y: 243}
+VM3077:5 Object {x: 4194, y: 1854}
+VM3077:5 Object {x: 4239, y: 630}
+VM3077:5 Object {x: 4221, y: 8865}
+VM3077:5 Object {x: 4410, y: 5886}
+VM3077:5 Object {x: 4446, y: 7038}
+VM3077:5 Object {x: 4554, y: 4248}
+VM3077:5 Object {x: 4698, y: 6489}
+VM3077:5 Object {x: 4716, y: 4824}
+VM3077:5 Object {x: 4716, y: 9711}
+VM3077:5 Object {x: 4851, y: 2511}
+VM3077:5 Object {x: 4833, y: 6003}
+VM3077:5 Object {x: 4815, y: 7821}
+VM3077:5 Object {x: 5049, y: 1404}
+VM3077:5 Object {x: 5004, y: 8424}
+VM3077:5 Object {x: 5085, y: 9432}
+VM3077:5 Object {x: 5175, y: 5670}
+VM3077:5 Object {x: 5247, y: 3672}
+VM3077:5 Object {x: 5337, y: 477}
+VM3077:5 Object {x: 5490, y: 5031}
+VM3077:5 Object {x: 5463, y: 6759}
+VM3077:5 Object {x: 5409, y: 7299}
+VM3077:5 Object {x: 5481, y: 7839}
+VM3077:5 Object {x: 5571, y: 2808}
+VM3077:5 Object {x: 5625, y: 1800}
+VM3077:5 Object {x: 5823, y: 4068}
+VM3077:5 Object {x: 5805, y: 7272}
+VM3077:5 Object {x: 5805, y: 8640}
+VM3077:5 Object {x: 5949, y: 3186}
+VM3077:5 Object {x: 5958, y: 5652}
+VM3077:5 Object {x: 5949, y: 9243}
+VM3077:5 Object {x: 6147, y: 6642}
+VM3077:5 Object {x: 6408, y: 477}
+VM3077:5 Object {x: 6417, y: 1323}
+VM3077:5 Object {x: 6408, y: 3717}
+VM3077:5 Object {x: 6462, y: 5994}
+VM3077:5 Object {x: 6606, y: 6606}
+VM3077:5 Object {x: 6777, y: 4788}
+VM3077:5 Object {x: 6777, y: 9540}
+VM3077:5 Object {x: 6876, y: 8136}
+VM3077:5 Object {x: 6939, y: 2646}
+VM3077:5 Object {x: 6912, y: 7830}
+VM3077:5 Object {x: 7065, y: 1890}
+VM3077:5 Object {x: 7083, y: 3375}
+VM3077:5 Object {x: 7047, y: 5859}
+VM3077:5 Object {x: 7263, y: 4527}
+VM3077:5 Object {x: 7470, y: 2646}
+VM3077:5 Object {x: 7578, y: 6786}
+VM3077:5 Object {x: 7578, y: 8811}
+VM3077:5 Object {x: 7650, y: 963}
+VM3077:5 Object {x: 7785, y: 5445}
+VM3077:5 Object {x: 7704, y: 7173}
+VM3077:5 Object {x: 7911, y: 2826}
+VM3077:5 Object {x: 8082, y: 279}
+VM3077:5 Object {x: 8028, y: 3060}
+VM3077:5 Object {x: 8073, y: 8082}
+VM3077:5 Object {x: 8136, y: 6264}
+VM3077:5 Object {x: 8208, y: 3699}
+VM3077:5 Object {x: 8334, y: 1665}
+VM3077:5 Object {x: 8487, y: 657}
+VM3077:5 Object {x: 8541, y: 2448}
+VM3077:5 Object {x: 8514, y: 5166}
+VM3077:5 Object {x: 8595, y: 7056}
+VM3077:5 Object {x: 8658, y: 4374}
+VM3077:5 Object {x: 8658, y: 8793}
+VM3077:5 Object {x: 8838, y: 1485}
+VM3077:5 Object {x: 8946, y: 9387}
+VM3077:5 Object {x: 9027, y: 6165}
+VM3077:5 Object {x: 9567, y: 1413}
+VM3077:5 Object {x: 9549, y: 7947}
+VM3077:5 Object {x: 9675, y: 5751}
+VM3077:5 Object {x: 9738, y: 3528}
+VM3077:5 Object {x: 9801, y: 693}
+
+
+for (var x = 0; x < 100; x++) {
+for (var y = 0; y < 100; y++) {
+var tile = MAP.tiles[x][y];
+if (tile.p.length > 0) {
+console.log(tile.p[0]);
+}}}
+VM3349:5 Object {x: 684, y: 8541, hit: LinearAnimation, update: false, time: 0…}
+VM3349:5 Object {x: 792, y: 3969, hit: LinearAnimation, update: false, time: 0…}
+VM3349:5 Object {x: 783, y: 7290, hit: LinearAnimation, update: false, time: 0…}
+VM3349:5 Object {x: 1404, y: 2745, hit: LinearAnimation, update: false, time: 0…}
+VM3349:5 Object {x: 1647, y: 747, hit: LinearAnimation, update: false, time: 0…}
+VM3349:5 Object {x: 1764, y: 4860, hit: LinearAnimation, update: false, time: 0…}
+VM3349:5 Object {x: 2646, y: 8406, hit: LinearAnimation, update: false, time: 0…}
+VM3349:5 Object {x: 2790, y: 1764, hit: LinearAnimation, update: false, time: 0…}
+VM3349:5 Object {x: 3204, y: 1071, hit: LinearAnimation, update: false, time: 0…}
+VM3349:5 Object {x: 3492, y: 2520, hit: LinearAnimation, update: false, time: 0…}
+VM3349:5 Object {x: 3972, y: 4896, hit: LinearAnimation, update: false, time: 0…}
+VM3349:5 Object {x: 4518, y: 6003, hit: LinearAnimation, update: false, time: 0…}
+VM3349:5 Object {x: 4824, y: 7704, hit: LinearAnimation, update: false, time: 0…}
+VM3349:5 Object {x: 4995, y: 9369, hit: LinearAnimation, update: false, time: 0…}
+VM3349:5 Object {x: 5607, y: 558, hit: LinearAnimation, update: false, time: 0…}
+VM3349:5 Object {x: 5940, y: 4122, hit: LinearAnimation, update: false, time: 0…}
+VM3349:5 Object {x: 6237, y: 6516, hit: LinearAnimation, update: false, time: 0…}
+VM3349:5 Object {x: 6768, y: 2673, hit: LinearAnimation, update: false, time: 0…}
+VM3349:5 Object {x: 6750, y: 7848, hit: LinearAnimation, update: false, time: 0…}
+VM3349:5 Object {x: 6957, y: 5760, hit: LinearAnimation, update: false, time: 0…}
+VM3349:5 Object {x: 8307, y: 6282, hit: LinearAnimation, update: false, time: 0…}
+VM3349:5 Object {x: 8424, y: 2538, hit: LinearAnimation, update: false, time: 0…}
+VM3349:5 Object {x: 8523, y: 513, hit: LinearAnimation, update: false, time: 0…}
+VM3349:5 Object {x: 8595, y: 5202, hit: LinearAnimation, update: false, time: 0…}
+VM3349:5 Object {x: 8703, y: 8712, hit: LinearAnimation, update: false, time: 0…}
+
